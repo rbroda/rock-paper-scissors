@@ -24,6 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: 0 25px;
 }
 
 .rules-list-container {
@@ -33,11 +34,12 @@ body {
 
 .main-game-container {
   text-align: center;
+  margin: 0 25px;
 }
 
 .start-button {
-  height: 15vh;
-  width: 20vw;
+  height: 75px;
+  width: 150px;
   margin: 100px 0;
   background-color: #3592ff;
   border: none;
