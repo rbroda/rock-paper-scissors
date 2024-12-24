@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header-main">
+      <p class="header-text">Rock Paper Scissors</p>
+    </header>
+    <section class="main-content-container">
+      <h1 class="welcome-heading">Welcome to the game!</h1>
+      <h3 class="welcome-description">
+        This is a classic game of rock, paper, scissors. The rules are simple:
+      </h3>
+      <div class="rules-list-container">
+        <ol class="rules-list">
+          <li>Click "Start" to begin playing.</li>
+          <li>Select one of the three options: Rock, Paper or Scissors.</li>
+          <li>The computer will then randomly pick one as well.</li>
+          <li>
+            A scoreboard on the screen will keep track of your wins, losses and
+            draws.
+          </li>
+          <li>Remember: Scissors > Paper, Paper > Rock, Rock > Scissors.</li>
+          <li>First to 5 wins!</li>
+        </ol>
+      </div>
+    </section>
+    <section class="main-game-container">
+      <button onClick="startGame()" id="start-button" class="start-button">
+        Start!
+      </button>
+      <div id="game-container" class="game-container-toggle">
+        <div class="game-score-container">
+          <h4 class="score-wins">Wins: <span id="wins-inner-text">0</span></h4>
+          <h4 class="score-losses">
+            Losses: <span id="losses-inner-text">0</span>
+          </h4>
+          <h4 class="score-draws">
+            Draws: <span id="draws-inner-text">0</span>
+          </h4>
+        </div>
+        <p id="message-board"></p>
+        <button id="restart-button" class="start-button button-hide">
+          Restart!
+        </button>
+        <div id="game-image-container" class="game-image-container">
+          <img
+            onClick="playGame(event)"
+            class="rock"
+            src="./images/rock.jpg"
+            alt="Rock"
+          />
+          <img
+            onClick="playGame(event)"
+            class="paper"
+            src="./images/paper.jpg"
+            alt="Paper"
+          />
+          <img
+            onClick="playGame(event)"
+            class="scissors"
+            src="./images/scissors.jpg"
+            alt="Scissors"
+          />
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
