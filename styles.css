@@ -7,10 +7,6 @@ body {
   background-color: #f7f7f7;
 }
 
-.rules-list li {
-  text-decoration: none;
-}
-
 .header-main {
   background-color: #3592ff;
   color: #f7f7f7;
@@ -31,6 +27,7 @@ body {
 }
 
 .rules-list-container {
+  justify-items: center;
   text-align: start;
 }
 
@@ -41,7 +38,7 @@ body {
 .start-button {
   height: 15vh;
   width: 20vw;
-  margin: 50px 0;
+  margin: 100px 0;
   background-color: #3592ff;
   border: none;
   border-radius: 10px;
@@ -77,6 +74,8 @@ body {
 
 .game-image-container img {
   width: 25vw;
+  border: 3px solid #3592ff;
+  border-radius: 10px;
 }
 
 .button-hide {

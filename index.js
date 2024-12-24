@@ -18,15 +18,35 @@ let gameInfo = {
   human: "",
 };
 
+const resetGameInfo = () => {
+  gameInfo.currentGame = "";
+  gameInfo.wins = 0;
+  gameInfo.losses = 0;
+  gameInfo.draws = 0;
+  gameInfo.computer = "";
+  gameInfo.human = "";
+};
+
+const resetScore = () => {
+  scoreBoardMessage.innerText = "";
+  scoreBoardWins.innerText = 0;
+  scoreBoardLosses.innerText = 0;
+  scoreBoardDraws.innerText = 0;
+};
+
+const renewScreen = () => {
+  gameImageContainer.classList.toggle("game-image-container-toggle");
+  restartButton.classList.toggle("button-hide");
+};
+
 const checkScore = () => {
   if (gameInfo.wins > 4 || gameInfo.losses > 4) {
-    console.log("triggered!");
     gameImageContainer.classList.toggle("game-image-container-toggle");
     restartButton.classList.toggle("button-hide");
     if (gameInfo.wins > 4) {
-      scoreBoardMessage.innerText = `Congrats! You beat the computer by a score of ${gameInfo.wins} - ${gameInfo.losses}!`;
+      scoreBoardMessage.innerText = `Congrats! You beat the computer by a score of ${gameInfo.wins} - ${gameInfo.losses}! Click the restart button to play again.`;
     } else {
-      scoreBoardMessage.innerText = `Rats! You were bested by the computer by a score of ${gameInfo.wins} - ${gameInfo.losses}!`;
+      scoreBoardMessage.innerText = `Rats! You were bested by the computer by a score of ${gameInfo.wins} - ${gameInfo.losses}! Click the restart button to play again.`;
     }
   }
 };
@@ -38,6 +58,12 @@ const computerSelection = () => {
 const startGame = () => {
   startButton.classList.toggle("button-hide");
   gameScreen.classList.toggle("game-container-toggle");
+};
+
+const restartGame = () => {
+  resetGameInfo();
+  resetScore();
+  renewScreen();
 };
 
 const checkHumanSelection = () => {

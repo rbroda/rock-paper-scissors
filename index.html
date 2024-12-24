@@ -41,16 +41,20 @@
       </button>
       <div id="game-container" class="game-container-toggle">
         <div class="game-score-container">
-          <h4 class="score-wins">Wins: <span id="wins-inner-text">0</span></h4>
+          <h4 class="score-wins">You: <span id="wins-inner-text">0</span></h4>
           <h4 class="score-losses">
-            Losses: <span id="losses-inner-text">0</span>
+            Computer: <span id="losses-inner-text">0</span>
           </h4>
           <h4 class="score-draws">
-            Draws: <span id="draws-inner-text">0</span>
+            Draw: <span id="draws-inner-text">0</span>
           </h4>
         </div>
         <p id="message-board"></p>
-        <button id="restart-button" class="start-button button-hide">
+        <button
+          onClick="restartGame()"
+          id="restart-button"
+          class="start-button button-hide"
+        >
           Restart!
         </button>
         <div id="game-image-container" class="game-image-container">
